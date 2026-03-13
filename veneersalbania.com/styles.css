@@ -44,6 +44,46 @@ h3 { font-size:1.2rem; }
 .button { display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 22px; border-radius:999px; border:1px solid transparent; font-weight:800; cursor:pointer; }
 .button.primary { background:var(--primary); color:var(--primary-ink); }
 .button.ghost { background:transparent; border-color:var(--line); }
+.direct-contact, .inline-whatsapp {
+  margin: 0 0 24px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.74);
+}
+.direct-contact-label {
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.direct-contact-links, .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #1a7f62;
+  color: #f6fffb;
+  font-weight: 800;
+}
+.contact-pill.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.direct-contact-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
 .trust-strip, .bullet-columns ul { margin:0; padding-left:18px; }
 .trust-strip li, .bullet-columns li { margin:8px 0; color:var(--muted); }
 .accent-card { border-radius:28px; position:relative; overflow:hidden; }
@@ -65,7 +105,40 @@ input, select, textarea { width:100%; border:1px solid var(--line); border-radiu
 .status-message { min-height:24px; }
 .status-message.success { color:var(--primary); }
 .status-message.error { color:#9c2f2f; }
+.inline-whatsapp {
+  margin-top: 24px;
+}
+.inline-whatsapp a {
+  display: inline-flex;
+  margin-top: 8px;
+  color: var(--primary);
+  font-weight: 800;
+}
 .footer { display:flex; justify-content:space-between; align-items:center; }
+.footer-copy {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+.footer-links a {
+  font-weight: 700;
+}
+.floating-wa {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #1a7f62;
+  color: #f6fffb;
+  font-weight: 800;
+  box-shadow: 0 20px 40px rgba(26, 127, 98, 0.28);
+}
 @media (max-width: 900px) {
   .hero, .section-grid, .form-section, .process .steps, .bullet-columns, .field-grid { grid-template-columns:1fr; }
   .topbar, .footer { flex-direction:column; align-items:flex-start; gap:12px; }
