@@ -47,10 +47,10 @@ function trackEvent(eventName, params = {}) {
 function readUtmParams() {
   const params = new URLSearchParams(window.location.search);
   return {
-    utm_source: params.get("utm_source"),
-    utm_medium: params.get("utm_medium"),
-    utm_campaign: params.get("utm_campaign"),
-    utm_content: params.get("utm_content")
+    utmSource: params.get("utm_source"),
+    utmMedium: params.get("utm_medium"),
+    utmCampaign: params.get("utm_campaign"),
+    utmContent: params.get("utm_content")
   };
 }
 
@@ -64,16 +64,16 @@ async function submitLead(form) {
     phone: data.get("phone")?.toString().trim() || null,
     whatsapp: data.get("whatsapp")?.toString().trim() || null,
     procedure: config.procedure || "Consultation",
-    source_domain: window.location.hostname,
+    sourceDomain: window.location.hostname,
     brand: config.brand || window.location.hostname,
     source: data.get("source")?.toString().trim() || "website",
-    campaign_slug: config.campaignSlug || window.location.hostname,
+    campaignSlug: config.campaignSlug || window.location.hostname,
     country: data.get("country")?.toString().trim() || null,
-    budget_range: data.get("budget_range")?.toString().trim() || null,
+    budgetRange: data.get("budget_range")?.toString().trim() || null,
     timeline: data.get("timeline")?.toString().trim() || null,
     notes: data.get("notes")?.toString().trim() || null,
-    consent_to_contact: data.get("consent_to_contact") === "on",
-    consent_to_call: data.get("consent_to_call") === "on",
+    consentToContact: data.get("consent_to_contact") === "on",
+    consentToCall: data.get("consent_to_call") === "on",
     ...readUtmParams()
   };
 
